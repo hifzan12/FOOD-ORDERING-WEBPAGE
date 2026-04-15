@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Restaurant - Order Online</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <h1 class="restaurant-name">Anupam Restaurant</h1>
+            <p class="tagline">Delicious food, delivered fresh</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Order Type Selection -->
+            <section class="order-type-section">
+                <h2 class="section-title">Select Order Type</h2>
+                <div class="order-type-buttons">
+                    <button class="order-type-btn active" data-type="dine-in" data-testid="dine-in-btn">
+                        <span class="btn-icon">🍽️</span>
+                        <span>Dine-in</span>
+                    </button>
+                    <button class="order-type-btn" data-type="takeaway" data-testid="takeaway-btn">
+                        <span class="btn-icon">📦</span>
+                        <span>Takeaway</span>
+                    </button>
+                </div>
+                <div class="table-input-wrapper" id="tableInputWrapper">
+                    <label for="tableNumber">Table Number</label>
+                    <input type="number" id="tableNumber" placeholder="Enter table number" min="1" data-testid="table-number-input">
+                </div>
+            </section>
+
+            <!-- Menu Section -->
+            <section class="menu-section">
+                <h2 class="section-title">Our Menu</h2>
+                <div class="menu-grid" id="menuGrid">
+                    <!-- Menu items will be dynamically added here -->
+                </div>
+            </section>
+
+            <!-- Cart Preview -->
+            <div class="cart-preview" id="cartPreview" style="display: none;">
+                <div class="cart-header">
+                    <h3>Your Order</h3>
+                    <button class="clear-cart-btn" id="clearCart" data-testid="clear-cart-btn">Clear</button>
+                </div>
+                <div class="cart-items" id="cartItems">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span class="total-amount" id="totalAmount" data-testid="total-amount">₹0</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Order Button (Fixed) -->
+    <div class="order-button-wrapper" id="orderButtonWrapper" style="display: none;">
+        <button class="order-btn" id="orderBtn" data-testid="order-whatsapp-btn">
+            <span class="whatsapp-icon">📱</span>
+            <span>Order on WhatsApp</span>
+        </button>
+    </div>
+
+    <script src ="scipt.js"></script>
+</body>
+</html>
